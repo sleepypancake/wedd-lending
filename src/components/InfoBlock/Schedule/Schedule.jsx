@@ -38,7 +38,13 @@ export const Schedule = () => (
                 </div>
             </div>
             <div className={styles.schedule__map}>
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A979fa20cef3188adf1b686ebe91e7e7b0b324d772d0fd752c9f0b8bc8980d857&amp;source=constructor" width="100%" height="250px" frameborder="0"></iframe>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A979fa20cef3188adf1b686ebe91e7e7b0b324d772d0fd752c9f0b8bc8980d857&amp;source=constructor"
+                    width="100%"
+                    height="250px"
+                    frameBorder="0"
+                    title="map"
+                />
             </div>
         </div>
     </div>
