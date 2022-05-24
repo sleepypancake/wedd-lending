@@ -1,6 +1,5 @@
 .schedule {
     &__wrapper {
-        min-height: 100vh;
         border-bottom: 1px solid #e8e8e8;
         padding: 60px;
     }
@@ -20,6 +19,7 @@
         font-weight: 600;
         display: flex;
         align-items: center;
+        margin-bottom: 24px;
         span {
             display: block;
             flex-grow: 1;
@@ -34,15 +34,39 @@
         }
     }
 
-    &__timing {}
+    &__timing {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
 
-    &__time {}
+    &__time {
+        text-align: right;
+        font-weight: 500;
+        font-size: 16px;
+    }
 
     &__desc {}
 
-    &__desc_title {}
+    &__desc_title {
+        margin-bottom: 14px;
+    }
 
-    &__desc_link {}
+    &__desc_link {
+        display: inline-block;
+        margin-bottom: 14px;
+        color: rgba(178,164,106,1);
+        text-decoration: none;
+        &:hover {
+            color: #3A3C3E;
+        }
+    }
 
     &__desc_info {}
+
+    &__map {
+        min-height: 200px;
+        filter: grayscale(1);
+    }
 }

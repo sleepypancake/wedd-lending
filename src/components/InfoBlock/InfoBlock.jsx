@@ -6,7 +6,6 @@ import styles from './InfoBlock.module.scss'
 export const InfoBlock = () => (
     <div className={styles.info__wrapper}>
         <WelcomeBlock/>
-        <hr/>
         <Schedule/>
     </div>
 )

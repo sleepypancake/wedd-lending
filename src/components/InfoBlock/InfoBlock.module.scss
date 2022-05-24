@@ -1,7 +1,9 @@
 .info__wrapper {
     display: flex;
     flex-direction: column;
-    width: 40%;
     height: 100vh;
     overflow-y: scroll;
+    @media (min-width: 1440px) {
+        width: 40%;
+    }
 }
