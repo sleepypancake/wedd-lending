@@ -1,4 +1,4 @@
-.questions {
+.moreInformation {
     &__wrapper {
         border-bottom: 1px solid #e8e8e8;
         padding: 20px;
@@ -12,11 +12,8 @@
         font-size: 42px;
     }
 
-    &__content {}
-}
-
-.accordeon {
-    &__title {}
-
-    &__answer{}
+    &__text {
+        margin-bottom: 40px;
+        font-weight: 500;
+    }
 }
