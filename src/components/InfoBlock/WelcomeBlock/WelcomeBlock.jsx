@@ -10,11 +10,13 @@ export const WelcomeBlock = () => {
     const [hours, setHours] = useState(null)
     const [minutes, setMinutes] = useState(null)
     const [letsSelebrate, setLetsSelebrate] = useState(false)
+    const [timeForCounter, setTimeForCounter] = useState(0)
 
     const updateTime = () => {
         const today = new Date();
         const weddDay = new Date('07.02.2022')
-        const timeForCounter = weddDay.getTime() - today.getTime()
+        // const timeForCounter = weddDay.getTime() - today.getTime()
+        setTimeForCounter(weddDay.getTime() - today.getTime())
         if (timeForCounter > 0) {
             const restFromDays = timeForCounter % (MILISECONDS_PER_DAY)
             const restFromHours = restFromDays %  MILISECONS_PER_HOUR
@@ -45,6 +47,7 @@ export const WelcomeBlock = () => {
         <div className={styles.welcome__details}>
             <Text style={styles.welcome__date}>Суббота, 2 июля, 2022</Text>
             <Title style={styles.welcome__place}>Краснодар,<br/> Краснодарский край, Россия</Title>
+            <>{letsSelebrate}, {timeForCounter}</>
             {letsSelebrate ?  <Text style={styles.welcome__date}>Сегодня!</Text> :
             <Text style={styles.welcome__counter}>
                 {days} {declOfNum(days, ['день ', 'дня ', 'дней '])}
