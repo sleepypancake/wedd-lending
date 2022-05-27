@@ -2,14 +2,22 @@ import React, { useEffect, useState } from "react";
 import styles from './WelcomeBlock.module.scss'
 import { Text } from "../../../UI/Text/Text";
 import { Title } from "../../../UI/Title/Title";
-import { declOfNum } from "../../../utils/Hooks/declOfNum";
+import { declOfNum } from "../../../utils/helpers/declOfNum";
+import { useInView } from 'react-intersection-observer';
 import { APPLE_LINK, APPLE_PLATFORMS, GOOGLE_LINK, MILISECONDS_PER_DAY, MILISECONDS_PER_MINUTE, MILISECONS_PER_HOUR } from "../../../utils/constants";
 
-export const WelcomeBlock = () => {
+export const WelcomeBlock = ({setActiveSlideCard}) => {
     const [days, setDays] = useState(null)
     const [hours, setHours] = useState(null)
     const [minutes, setMinutes] = useState(null)
     const [letsSelebrate, setLetsSelebrate] = useState(false)
+    const { ref, inView, } = useInView({
+        threshold: 0,
+      });
+
+    useEffect(() => {
+        if (inView) setActiveSlideCard(0)
+    }, [inView, setActiveSlideCard])
 
     const updateTime = () => {
         const today = new Date();
@@ -41,8 +49,10 @@ export const WelcomeBlock = () => {
         } else  window.location.href = GOOGLE_LINK
       }
 
+   
+
     return (
-    <div className={styles.welcome__wrapper}>
+    <div className={styles.welcome__wrapper} ref={ref}>
         <div className={styles.welcome__details}>
             <Text style={styles.welcome__date}>Суббота, 2 июля, 2022</Text>
             <Title style={styles.welcome__place}>Краснодар,<br/> Краснодарский край, Россия</Title>

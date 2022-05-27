@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from './Schedule.module.scss'
 import { Text } from "../../../UI/Text/Text";
 import { Title } from "../../../UI/Title/Title";
+import { useInView } from "react-intersection-observer";
 
-export const Schedule = () => (
-    <div className={styles.schedule__wrapper}>
+export const Schedule = ({setActiveSlideCard}) => {
+    const { ref, inView, } = useInView({
+        threshold: 0,
+      });
+
+    useEffect(() => {
+        if (inView) setActiveSlideCard(1)
+    }, [inView, setActiveSlideCard])
+
+    return (
+    <div className={styles.schedule__wrapper} ref={ref}>
         <Title style={styles.schedule__title}>Расписание</Title>
         <div className={styles.schedule__content}>
             <p className={styles.schedule__date}>
@@ -48,4 +58,5 @@ export const Schedule = () => (
             </div>
         </div>
     </div>
-)
+    )
+}

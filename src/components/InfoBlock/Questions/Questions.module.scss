@@ -16,7 +16,26 @@
 }
 
 .accordeon {
-    &__title {}
+    margin-bottom: 30px;
+    padding-left: 30px;
+    position: relative;
+    &:before {
+        content: '';
+        background-image: url('../../../assets/images/question-mark.png');
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 0;
+        top: 3px;
+
+    }
+    &__title {
+        font-weight: 500;
+        margin-bottom: 10px;
+        @media (min-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
 
     &__answer{}
 }
