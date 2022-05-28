@@ -8,7 +8,8 @@
         position: absolute;
         top: 0;
         transition: background-image 0.7s ease-in;
-        
+        // animation: fadeIn 0.7s;
+
     }
 
     &__desc_wrap {
@@ -49,8 +50,6 @@
         }
     }
 
-   
-
 }
 .sliderCard__more {
     display: block;
@@ -89,42 +88,34 @@
     }
 }
 
-@keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-@-moz-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
-
-@-webkit-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
-
-@-o-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
-
-@-ms-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
+// @keyframes fadeIn {
+//     0% {opacity:0;}
+//     100% {opacity:1;}
+//   }
 
 .active {
     &_0 {
         background-image: url(../../../assets/images/slide11.jpg);
     }
     &_1 {
-        background-image: url(../../../assets/images/slider-2.jpg);
+        background-image: url(../../../assets/images/slide2.jpg);
     }
     &_2 {
-        background-image: url(../../../assets/images/slider-3.jpg);
+        background-image: url(../../../assets/images/slide3.jpg);
     }
     &_3 {
-        background-image: url(../../../assets/images/slider-1.jpg);
+        background-image: url(../../../assets/images/slide4.jpg);
+    }
+    &_4 {
+        background-image: url(../../../assets/images/slide5.jpg);
+    }
+    &_5 {
+        background-image: url(../../../assets/images/slide6.jpg);
+    }
+    &_6 {
+        background-image: url(../../../assets/images/slide7.jpg);
+    }
+    &_7 {
+        background-image: url(../../../assets/images/slide8.jpg);
     }
 }

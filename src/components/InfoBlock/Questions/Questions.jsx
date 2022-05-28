@@ -1,20 +1,10 @@
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 import { Text } from "../../../UI/Text/Text";
 import { Title } from "../../../UI/Title/Title";
 import styles from './Questions.module.scss'
 
-export const Questions = ({setActiveSlideCard}) => {
-    const { ref, inView, } = useInView({
-        threshold: 0,
-      });
-
-    useEffect(() => {
-        if (inView) setActiveSlideCard(2)
-    }, [inView, setActiveSlideCard])
-
-    return (
-    <div className={styles.questions__wrapper} ref={ref}>
+export const Questions = () => (
+    <div className={styles.questions__wrapper}>
         <Title style={styles.questions__title}>Важные моменты</Title>
         <div className={styles.questions__content}>
             <div className={styles.accordeon}>
@@ -39,4 +29,3 @@ export const Questions = ({setActiveSlideCard}) => {
         </div>
     </div>
     )
-}
