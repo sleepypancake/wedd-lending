@@ -3,8 +3,10 @@ import { declOfNum } from "./declOfNum";
 
 export const getDateBefore = () => {
     const today = new Date();
-    const weddDay = new Date('07.02.2022')
+    const weddDay = new Date('07/02/2022')
     const timeForCounter = weddDay.getTime() - today.getTime()
+    console.log(today, weddDay, timeForCounter)
+    
     if (timeForCounter > 0) {
         const restFromDays = timeForCounter % MILISECONDS_PER_DAY
         const restFromHours = restFromDays %  MILISECONS_PER_HOUR
