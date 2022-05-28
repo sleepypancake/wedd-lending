@@ -13,12 +13,13 @@ export const getDateBefore = () => {
         const daysBefore = Math.round(timeForCounter / MILISECONDS_PER_DAY)
         const hoursBefore = Math.round(restFromDays / MILISECONS_PER_HOUR)
         const minutesBefore = Math.round(restFromHours / MILISECONDS_PER_MINUTE)
+        
         console.log(restFromDays, restFromHours, daysBefore, hoursBefore, minutesBefore)
         return (
             `
                 ${daysBefore} ${declOfNum(daysBefore, ['день ', 'дня ', 'дней '])}
-                ${hoursBefore} ${declOfNum(hoursBefore, ['час ', 'часа ', 'часов '])}
-                ${minutesBefore} ${declOfNum(minutesBefore, ['минута ', 'минуты ', 'минут '])}
+                ${minutesBefore === 60 ? hoursBefore + 1 : hoursBefore} ${declOfNum(hoursBefore, ['час ', 'часа ', 'часов '])}
+                ${minutesBefore === 60 ? 0 :  minutesBefore} ${declOfNum(minutesBefore, ['минута ', 'минуты ', 'минут '])}
             `
         )
     } else {
