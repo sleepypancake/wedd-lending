@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Text } from "../../../UI/Text/Text";
 import { Title } from "../../../UI/Title/Title";
 import styles from './SliderCard.module.scss'
 import cn from 'classnames'
-import { getDateBefore } from "../../../utils/helpers/getDateBefore";
 
 export const SliderCard = ({activeId, activeDate}) => {
     const slideBlock = useRef(null)
@@ -13,7 +12,6 @@ export const SliderCard = ({activeId, activeDate}) => {
         window.scroll(0, slideBlock.current.offsetHeight)
         setBtnActive(false)
     }
-    console.log(activeId, activeDate)
     return (
     <div className={cn(styles.sliderCard__wrapper, styles[`active_${activeId}`])} ref={slideBlock}>
         <div className={styles.sliderCard__desc_wrap}>
