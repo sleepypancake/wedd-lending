@@ -7,7 +7,7 @@ export const MoreInformation = () => (
         <div className={styles.moreInformation__wrapper} >
             <Text style={styles.moreInformation__text}>И еще, чуть не забыли...</Text>
             <div className={styles.moreInformation__content}>
-                <Title style={styles.moreInformation__title}>No gor'ko, please!</Title>
+                <Title style={styles.moreInformation__title}>Без "Горько", пожалуйста!</Title>
             </div>
         </div>
     )

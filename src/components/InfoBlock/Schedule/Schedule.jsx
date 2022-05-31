@@ -15,7 +15,14 @@ export const Schedule = () => (
                 <Text style={styles.schedule__time}>15:00 - 15:30</Text>
                 <div className={styles.schedule__desc}>
                     <Text style={styles.schedule__desc_title}>Регистрация</Text>
-                    <a href="/" className={styles.schedule__desc_link}>Краснодар, Гимназическая, 83</a>
+                    <a 
+                        href="https://yandex.ru/maps/-/CCUJeRST~D" 
+                        target="_blank" 
+                        rel="noreferrer"
+                        className={styles.schedule__desc_link}
+                    >
+                        Краснодар, Гимназическая, 83
+                    </a>
                     <Text style={styles.schedule__desc_info}>В этом месте начнётся наш день. Мы будем рады видеть вас,
                         но отметим, что роспись займёт совсем немного времени и присутствие не обязательно.
                     </Text>
@@ -31,7 +38,14 @@ export const Schedule = () => (
                 <Text style={styles.schedule__time}>17:30 - 22:00</Text>
                 <div className={styles.schedule__desc}>
                     <Text style={styles.schedule__desc_title}>Праздничный ужин</Text>
-                    <a href="/" className={styles.schedule__desc_link}>Ресторан Голый повар, Краснодар, Красная, 176</a>
+                    <a 
+                        href="https://yandex.ru/maps/-/CCUJeRgx8D" 
+                        target="_blank" 
+                        rel="noreferrer"
+                        className={styles.schedule__desc_link}
+                    >
+                        Ресторан Голый повар, Краснодар, Красная, 176
+                    </a>
                     <Text style={styles.schedule__desc_info}> Будем вкусно кушать, пить и веселиться. 
                         На территории есть парковка, 1 час бесплатно, дальше 100 р/час.
                     </Text>
