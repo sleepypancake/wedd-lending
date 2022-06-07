@@ -12,7 +12,7 @@ export const Schedule = () => (
                 <span className={styles.schedule__date_line}></span>
             </p>
             <div className={styles.schedule__timing}>
-                <Text style={styles.schedule__time}>15:00 - 15:30</Text>
+                <Text style={styles.schedule__time}>16:30 - 17:00</Text>
                 <div className={styles.schedule__desc}>
                     <Text style={styles.schedule__desc_title}>Регистрация</Text>
                     <a 
@@ -29,13 +29,7 @@ export const Schedule = () => (
                 </div>
             </div>
             <div className={styles.schedule__timing}>
-                <Text style={styles.schedule__time}>16:00 - 17:00</Text>
-                <div className={styles.schedule__desc}>
-                    <Text style={styles.schedule__desc_title}>Обед с родителями</Text>
-                </div>
-            </div>
-            <div className={styles.schedule__timing}>
-                <Text style={styles.schedule__time}>17:30 - 22:00</Text>
+                <Text style={styles.schedule__time}>17:00 - 22:00</Text>
                 <div className={styles.schedule__desc}>
                     <Text style={styles.schedule__desc_title}>Праздничный ужин</Text>
                     <a 
